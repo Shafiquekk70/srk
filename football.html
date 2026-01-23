@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Football | SportsInfo</title>
+<style>
+body{
+  margin:0;
+  font-family:sans-serif;
+  background:#f4f4f4;
+  color:#333;
+}
+
+/* Container with background image + overlay */
+.container{
+  max-width:900px;
+  margin:40px auto;
+  background:rgba(255,255,255,0.95); /* semi-transparent for readability */
+  padding:25px;
+  border-radius:12px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.1);
+  position:relative;
+  overflow:hidden;
+}
+
+/* Optional background image behind content */
+.container::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:url('../Desktop/abc/back.jpg') no-repeat center center;
+  background-size:cover;
+  opacity:0.1;  /* low opacity for subtle effect */
+  z-index:0;
+}
+
+/* Ensure content is above background */
+.container > *{
+  position:relative;
+  z-index:1;
+}
+
+h1{
+  text-align:center;
+  color:#ed1c24;
+  margin-bottom:20px;
+  text-shadow:1px 1px 3px rgba(0,0,0,0.3);
+}
+
+.section{
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+  margin-bottom:25px;
+  align-items:center;
+  background:rgba(255,255,255,0.85); /* optional overlay for each section */
+  border-radius:10px;
+  padding:15px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.section img{
+  width:250px;
+  height:180px;
+  object-fit:cover;
+  border-radius:12px;
+  flex-shrink:0;
+  box-shadow:0 4px 10px rgba(0,0,0,0.2);
+  transition:0.3s;
+}
+
+.section img:hover{
+  transform:scale(1.05);
+}
+
+.section div{
+  flex:1;
+}
+
+.section h2{
+  margin:0 0 10px;
+  color:#ffcc00;
+  text-shadow:1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.section p{
+  margin:0 0 5px;
+  line-height:1.6;
+}
+
+.player-box{
+  display:flex;
+  gap:20px;
+  align-items:center;
+  background:rgba(10,10,10,0.85);
+  color:#fff;
+  padding:20px;
+  border-radius:12px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+.player-box img{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  border:4px solid #ed1c24;
+  object-fit:cover;
+  transition:0.3s;
+}
+
+.player-box img:hover{
+  transform:scale(1.1) rotate(-3deg);
+  box-shadow:0 6px 15px rgba(0,0,0,0.3);
+}
+
+.player-box div h2{
+  color:#ffcc00;
+  margin-bottom:8px;
+  text-shadow:1px 1px 2px rgba(0,0,0,0.3);
+}
+
+@media(max-width:768px){
+  .section{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .section img{
+    width:100%;
+    height:auto;
+  }
+
+  .player-box{
+    flex-direction:column;
+    text-align:center;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Football</h1>
+
+  <!-- Game Info -->
+  <div class="section">
+    <img src="../New folder (4)/cricket.webp" alt="Football Game">
+    <div>
+      <h2>About Football</h2>
+      <p>Football, also known as soccer, is the world's most popular sport, played between two teams of 11 players each.</p>
+      <p>Each match is 90 minutes long, divided into two halves of 45 minutes each.</p>
+      <p>The objective is to score more goals than the opponent by getting the ball into the opposing team's net.</p>
+      <p>Football is played professionally worldwide and is governed by FIFA rules.</p>
+    </div>
+  </div>
+
+  <!-- Famous Player -->
+  <div class="section player-box">
+    <img src="../New folder (4)/back.jpg" alt="Famous Player">
+    <div>
+      <h2>Lionel Messi</h2>
+      <p>One of the greatest footballers of all time, Messi is known for his dribbling, vision, and goal-scoring ability.</p>
+      <p>He has won multiple Ballon d'Or awards and numerous league titles with FC Barcelona and PSG.</p>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
